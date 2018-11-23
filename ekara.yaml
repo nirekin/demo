@@ -1,5 +1,5 @@
-name: testEnvironment3
-qualifier: testQualifier3
+name: DemoEnvironment
+qualifier: Dev
 
 ekara:
   components:
@@ -117,3 +117,5 @@ nodes:
 stacks:
   visualizer:
     component: visualizer
+    on:
+    - managers
