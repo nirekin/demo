@@ -7,8 +7,8 @@ ekara:
       repository: tbouvet/aws-provider
       version: test
     swarm:
-      repository: ekara-platform/swarm-orchestrator
-      version: v1.0.0-beta1      
+      repository: tbouvet/swarm-orchestrator
+      version: test      
     visualizer:
       repository: ekara-platform/swarm-visualizer
       version: v1.0.0-beta1
