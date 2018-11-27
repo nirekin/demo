@@ -4,8 +4,8 @@ qualifier: Dev
 ekara:
   components:
     aws:
-      repository: ekara-platform/aws-provider
-      version: v1.0.0-beta1
+      repository: tbouvet/aws-provider
+      version: test
     swarm:
       repository: ekara-platform/swarm-orchestrator
       version: v1.0.0-beta1      
