@@ -5,13 +5,13 @@ ekara:
   components:
     aws:
       repository: ekara-platform/aws-provider
-      version: alpha4
+      version: v1.0.0-beta1
     swarm:
       repository: ekara-platform/swarm-orchestrator
-      version: alpha5
+      version: v1.0.0-beta1
     visualizer:
       repository: ekara-platform/swarm-visualizer
-      version: alpha5
+      version: v1.0.0-beta1
 
 orchestrator:
   component: swarm
@@ -117,5 +117,3 @@ nodes:
 stacks:
   visualizer:
     component: visualizer
-    on:
-    - managers
