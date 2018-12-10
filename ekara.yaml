@@ -5,10 +5,10 @@ ekara:
   components:
     aws:
       repository: tbouvet/aws-provider
-      version: test
+      version: fix-nvme
     swarm:
       repository: tbouvet/swarm-orchestrator
-      version: test      
+      version: fix-nvme      
     visualizer:
       repository: ekara-platform/swarm-visualizer
       version: v1.0.0-beta1
