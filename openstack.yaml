@@ -4,14 +4,13 @@ qualifier: testOSQualifier
 ekara:
   components:
     osp:
-      repository: tbouvet/openstack-provider
-      version: test
+      repository: ekara-platform/openstack-provider
     swarm:
       repository: tbouvet/swarm-orchestrator
-      version: test
+      version: fix-nvme
     visualizer:
       repository: ekara-platform/swarm-visualizer
-      version: alpha5
+      version: v1.0.0-beta1
 
 
 orchestrator:
