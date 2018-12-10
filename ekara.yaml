@@ -7,7 +7,7 @@ ekara:
       repository: ekara-platform/aws-provider
       version: 1.0.0-beta1
     swarm:
-      repository:ekara-platform/swarm-orchestrator
+      repository: ekara-platform/swarm-orchestrator
       version: 1.0.0-beta1
     visualizer:
       repository: ekara-platform/swarm-visualizer
