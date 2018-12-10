@@ -8,7 +8,7 @@ ekara:
       version: 1.0.0-beta1
     swarm:
       repository:ekara-platform/swarm-orchestrator
-      version: 1.0.0-beta1   
+      version: 1.0.0-beta1
     visualizer:
       repository: ekara-platform/swarm-visualizer
       version: 1.0.0-beta1
