@@ -3,15 +3,19 @@ qualifier: dev
 
 ekara:
   distribution:
-    repository: https://github.com/ekara-platform/distribution
+    repository: ekara-platform/distribution
     ref: master
+  components:
+    visualizer:
+      repository: ekara-platform/swarm-visualizer
+      ref: master
 
 orchestrator:
-  component: swarm
+  component: ek-swarm
 
 providers:
   aws:
-    component: aws
+    component: ek-aws
     params:
       region: {{ .aws.region }}
       instance_type: "t2.micro"
