@@ -3,7 +3,7 @@ qualifier: dev
 
 ekara:
   distribution:
-    repository: https://github.com/ekara-platform/distribution
+    repository: https://github.com/nirekin/distribution
     ref: master
   components:
     visualizer:
