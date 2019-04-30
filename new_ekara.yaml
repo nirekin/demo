@@ -3,12 +3,10 @@ qualifier: dev
 
 ekara:
   distribution:
-    repository: https://github.com/nirekin/distribution
-    ref: master
+    repository: ekara-platform/distribution
   components:
     visualizer:
-      repository: ekara-platform/swarm-visualizer
-      ref: master
+      repository: ekara-platform/swarm-visualizer-stack
 
 orchestrator:
   component: ek-swarm
