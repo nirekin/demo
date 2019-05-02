@@ -1,5 +1,0 @@
-aws:
-  region: eu-west-1
-  accessKey:
-    id: 'REQUIRED'
-    secret: 'REQUIRED'
