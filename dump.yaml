@@ -2,11 +2,6 @@ name: ekara-demo-al
 qualifier: dev
 
 ekara:
-  #distribution:
-    #repository: nirekin/distribution
-  #components:
-    #visualizer:
-      #repository: ekara-platform/swarm-visualizer-stack
 
 orchestrator:
   component: ek-swarm
@@ -14,15 +9,15 @@ orchestrator:
 providers:
   aws:
     component: ek-aws
-    params:
-      region: {{ .aws.region }}
-      instance_type: "t2.micro"
-      ami_id: "ami-f90a4880"
-      vpc_id: "vpc-880aeaef"
-    env:
-      AWS_REGION: {{ .aws.region }}
-      AWS_ACCESS_KEY_ID: {{ .aws.accessKey.id }}
-      AWS_SECRET_ACCESS_KEY: {{ .aws.accessKey.secret }}
+    #params:
+    #  region: {{ .aws.region }}
+    #  instance_type: "t2.micro"
+    #  ami_id: "ami-f90a4880"
+    #  vpc_id: "vpc-880aeaef"
+    #env:
+    #  AWS_REGION: {{ .aws.region }}
+    #  AWS_ACCESS_KEY_ID: {{ .aws.accessKey.id }}
+    #  AWS_SECRET_ACCESS_KEY: {{ .aws.accessKey.secret }}
       
 nodes:
   managers:
@@ -82,23 +77,3 @@ nodes:
                   - 4789
                 cidr_ip: 0.0.0.0/0
                 rule_desc: overlay network traffic
-    #volumes:
-      #- path: /data1
-       # params:
-        #  device_name: xvdf
-         # volume_type: gp2
-          #volume_size: 9
-          #delete_on_termination: true
-      #- path: /var/lib/docker
-       # params:
-        #  device_name: xvdg
-         # volume_type: standard
-          #volume_size: 1
-          #delete_on_termination: true
-          #tags:
-           # Type: Docker
-            #TestTagKey: TestTagValue
- 
-#stacks:
-  #visualizer:
-    #component: visualizer
