@@ -172,6 +172,6 @@ nodes:
             Type: Docker
             TestTagKey: TestTagValue
 
-stacks:
-  visualizer:
-    component: visualizer
+#stacks:
+  #visualizer:
+    #component: visualizer
