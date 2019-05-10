@@ -2,7 +2,6 @@ name: ekara-demo-al
 qualifier: dev
 
 ekara:
-  base: "https://github.com/nirekin"
   distribution:
-    repository: /distribution
+    repository: nirekin/distribution
 
