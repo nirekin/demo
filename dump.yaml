@@ -4,9 +4,9 @@ qualifier: dev
 ekara:
   #distribution:
     #repository: nirekin/distribution
-  components:
-    visualizer:
-      repository: ekara-platform/swarm-visualizer-stack
+  #components:
+    #visualizer:
+      #repository: ekara-platform/swarm-visualizer-stack
 
 orchestrator:
   component: ek-swarm
