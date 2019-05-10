@@ -3,5 +3,5 @@ qualifier: dev
 
 ekara:
   distribution:
-    repository: nirekin/distribution
+    repository: https://github.com/nirekin/distribution
 
