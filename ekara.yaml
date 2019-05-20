@@ -9,7 +9,7 @@ ekara:
       repository: ekara-platform/swarm-visualizer-stack
 
 providers:
-  aws:
+  ek-aws:
     component: ek-aws
     params:
       instance_type: "t2.micro"
@@ -20,7 +20,7 @@ nodes:
   managers:
     instances: 3
     provider:
-      name: aws
+      name: ek-aws
       params:
         security_groups:
           - name: app
@@ -64,7 +64,7 @@ nodes:
   workers:
     instances: 4
     provider:
-      name: aws
+      name: ek-aws
       params:
         security_groups:
           - name: app
