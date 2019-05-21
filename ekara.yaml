@@ -123,4 +123,4 @@ stacks:
   visualizer:
     component: visualizer
     templates:
-      - "*-compose.yml"
+      - "docker-compose.yml"
