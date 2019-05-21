@@ -122,3 +122,5 @@ nodes:
 stacks:
   visualizer:
     component: visualizer
+    templates:
+      - docker-compose.yml
