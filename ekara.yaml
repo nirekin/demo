@@ -8,6 +8,9 @@ ekara:
     ek-aws:
       repository: adrienlauer/aws-provider
       ref: inventory
+    ek-swarm:
+      repository: adrienlauer/swarm-orchestrator
+      ref: inventory
     visualizer:
       repository: ekara-platform/swarm-visualizer-stack
 
