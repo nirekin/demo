@@ -8,6 +8,9 @@ ekara:
     visualizer:
       repository: ekara-platform/swarm-visualizer-stack
 
+orchestrator:
+  params:
+    remap: false
 nodes:
   '*':
     provider:
