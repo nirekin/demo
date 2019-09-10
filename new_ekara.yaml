@@ -29,7 +29,7 @@ nodes:
         volumes:
           docker:
             ebs:
-              volume_size: 1
+              volume_size: 10
               delete_on_termination: true
               device_name: /dev/xvdf
             fs:
