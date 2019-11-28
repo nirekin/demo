@@ -3,7 +3,8 @@ qualifier: light
 
 ekara:
   parent:
-    repository: nirekin/distribution
+    repository: ekara-platform/distribution
+      ref: test-copy
   components:
     visualizer:
       repository: ekara-platform/swarm-visualizer-stack
