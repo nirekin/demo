@@ -4,7 +4,7 @@ qualifier: light
 ekara:
   parent:
     repository: ekara-platform/distribution
-      ref: test-copy
+    ref: test-copy
   components:
     visualizer:
       repository: ekara-platform/swarm-visualizer-stack
