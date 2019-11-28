@@ -40,3 +40,5 @@ nodes:
 stacks:
   visualizer:
     component: ek-swarm-visualizer
+  app:
+    component: _
