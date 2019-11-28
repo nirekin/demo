@@ -1,13 +1,10 @@
 name: ekara_demo_gb
-qualifier: light
+qualifier: full
 
 ekara:
   parent:
     repository: ekara-platform/distribution
     ref: test-copy
-  components:
-    visualizer:
-      repository: ekara-platform/swarm-visualizer-stack
 
 nodes:
   '*':
@@ -19,28 +16,27 @@ nodes:
             rules:
               - proto: tcp
                 ports:
-                  - {{ .Vars.app.visualizer.port }} 
+                  - {{ .Vars.app.visualizer.port }}
+                  - {{ .Vars.app.web.port }}
                 cidr_ip: 0.0.0.0/0
-                rule_desc: allow all on port {{ .Vars.app.visualizer.port }} for the swarm visualizer 
-        instances:
-            instance_type: "t2.micro"
-        volumes:
-          docker:
-            ebs:
-              volume_size: 1
-              delete_on_termination: true
-              device_name: /dev/xvdf
-            fs:
-              mount_path: /var/lib/docker
-
-  nodeset1:
+                rule_desc: Allow inbound HTTP
+  cache:
+    instances: 3
     labels:
-      label1: value1
-      label2: value2
-    instances: 1
+      role_cache: true
+    provider:
+      params:
+        instances:
+          instance_type: "t3.medium"
+  web:
+    instances: 2
+    labels:
+      role_web: true
+    provider:
+      params:
+        instances:
+          instance_type: "t3.small"
 
 stacks:
   visualizer:
-    component: visualizer
-    templates:
-      - "docker-compose.yml"
+    component: ek-swarm-visualizer
