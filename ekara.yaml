@@ -42,3 +42,5 @@ stacks:
     component: ek-swarm-visualizer
   app:
     component: _
+    templates:
+      - "docker-compose.yml"
