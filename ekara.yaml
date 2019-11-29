@@ -49,7 +49,7 @@ stacks:
     - target:
         once: true
         labels:
-          label1: role_web   
+           role_web: true
         path: "/var/lib/ekara"
       sources:
         - "to_be_copied.txt"
