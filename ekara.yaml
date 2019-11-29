@@ -6,6 +6,9 @@ ekara:
     repository: ekara-platform/distribution
     ref: test-copy
 
+templates:
+  - "docker-compose.yml"
+
 nodes:
   '*':
     provider:
@@ -42,5 +45,3 @@ stacks:
     component: ek-swarm-visualizer
   app:
     component: _
-    templates:
-      - "docker-compose.yml"
