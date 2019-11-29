@@ -45,3 +45,11 @@ stacks:
     component: ek-swarm-visualizer
   app:
     component: _
+  copies:  
+    - target:
+        once: true
+        labels:
+          label1: role_web   
+        path: "/var/lib/ekara"
+      sources:
+        - "to_be_copied.txt"
