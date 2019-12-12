@@ -44,3 +44,4 @@ stacks:
     component: ek-swarm-visualizer
   app:
     component: _
+
