@@ -3,7 +3,7 @@ qualifier: full
 
 ekara:
   parent:
-    repository: nirekin/distribution
+    repository: ekara-platform/distribution
 
 templates:
   - "docker-compose.yml"
@@ -44,11 +44,3 @@ stacks:
     component: ek-swarm-visualizer
   app:
     component: _
-    copies:  
-    - target:
-        once: true
-        labels:
-          role_web: true
-        path: "/var/lib/ekara"
-      sources:
-        - "to_be_copied.txt"
