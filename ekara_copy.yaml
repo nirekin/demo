@@ -1,0 +1,54 @@
+name: ekara_demo_gb2
+qualifier: full
+
+ekara:
+  parent:
+    repository: ekara-platform/distribution
+
+templates:
+  - "docker-compose.yml"
+
+nodes:
+  '*':
+    provider:
+      name: ek-aws
+      params:
+        securityGroups:
+          app:
+            rules:
+              - proto: tcp
+                ports:
+                  - {{ .Vars.app.visualizer.port }}
+                  - {{ .Vars.app.web.port }}
+                cidr_ip: 0.0.0.0/0
+                rule_desc: Allow inbound HTTP
+  cache:
+    instances: 3
+    labels:
+      role_cache: true
+    provider:
+      params:
+        instances:
+          instance_type: "t3.medium"
+  web:
+    instances: 2
+    labels:
+      role_web: true
+    provider:
+      params:
+        instances:
+          instance_type: "t3.small"
+
+stacks:
+  visualizer:
+    component: ek-swarm-visualizer
+  app:
+    component: _
+    copies:  
+    - target:
+        once: true
+        labels:
+          role_web: true
+        path: "/var/lib/ekara"
+      sources:
+        - "to_be_copied.txt"
