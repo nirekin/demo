@@ -4,7 +4,6 @@ qualifier: full
 ekara:
   parent:
     repository: nirekin/distribution
-    ref: test-copy
 
 templates:
   - "docker-compose.yml"
