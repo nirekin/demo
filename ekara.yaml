@@ -3,7 +3,7 @@ qualifier: full
 
 ekara:
   parent:
-    repository: ekara-platform/distribution
+    repository: nirekin/distribution
 
 templates:
   - "docker-compose.yml"
