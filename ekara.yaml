@@ -4,6 +4,10 @@ qualifier: full
 ekara:
   parent:
     repository: nirekin/distribution
+  components:
+    ek-core:
+      repository: nirekin/core-stack
+      ref: master
 
 templates:
   - "docker-compose.yml"
@@ -42,6 +46,5 @@ nodes:
 stacks:
   visualizer:
     component: ek-swarm-visualizer
-  app:
-    component: _
-
+  api:
+    component: ek-core
