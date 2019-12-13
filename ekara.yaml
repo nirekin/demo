@@ -24,6 +24,11 @@ nodes:
                 ports:
                   - {{ .Vars.app.visualizer.port }}
                   - {{ .Vars.app.web.port }}
+                  - {{ .Vars.ekara.api.port }}
+                  - {{ .Vars.ekara.consul.port1 }}
+                  - {{ .Vars.ekara.consul.port2 }}
+                  - {{ .Vars.ekara.consul.port3 }}
+                  - {{ .Vars.ekara.consul.port4 }}
                 cidr_ip: 0.0.0.0/0
                 rule_desc: Allow inbound HTTP
   cache:
