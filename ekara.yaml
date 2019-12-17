@@ -7,7 +7,7 @@ ekara:
   components:
     ek-core:
       repository: nirekin/core-stack
-      ref: master
+      ref: test
 
 templates:
   - "docker-compose.yml"
