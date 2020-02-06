@@ -98,3 +98,6 @@ nodes:
  
     instances: 1
 
+stacks:
+  visualizer:
+    component: ek-swarm-visualizer
