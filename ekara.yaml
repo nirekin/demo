@@ -2,12 +2,23 @@ name: ekara_demo_gb1
 qualifier: light
 
 ekara:
-  distribution:
-    repository: nirekin/distribution
   components:
     nirekin-hook:
       repository: nirekin/hook
-
+    ek-aws:
+      repository: ekara-platform/aws-provider
+      ref: master
+    ek-swarm:
+      repository: ekara-platform/swarm-orchestrator
+      ref: master
+    ek-swarm-visualizer:
+      repository: ekara-platform/swarm-visualizer-stack
+      ref: v1.0.0
+      
+vars:
+  ekara:
+    path: /var/lib/ekara
+    
 tasks:
   hook1:
     component: nirekin-hook 
