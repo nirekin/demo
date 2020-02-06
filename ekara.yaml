@@ -7,14 +7,6 @@ ekara:
   components:
     nirekin-hook:
       repository: nirekin/hook
-    ek-aws:
-      repository: adrienlauer/aws-provider
-      ref: inventory
-    ek-swarm:
-      repository: adrienlauer/swarm-orchestrator
-      ref: inventory
-    visualizer:
-      repository: ekara-platform/swarm-visualizer-stack
 
 tasks:
   hook1:
@@ -57,6 +49,6 @@ nodes:
 
 stacks:
   visualizer:
-    component: visualizer
+    component: ek-swarm-visualizer
     templates:
       - "docker-compose.yml"
