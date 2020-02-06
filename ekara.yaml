@@ -19,7 +19,10 @@ vars:
   ekara:
     path: /var/lib/ekara
     
-
+tasks:
+  hook1:
+    component: nirekin-hook 
+    playbook: book1.yaml
       
 providers:
   ek-aws:
@@ -89,6 +92,11 @@ nodes:
             TestTagKey: TestTagValue
  
     instances: 1
+
+hooks:
+  create:
+    before:
+      - task: hook1  
 
 stacks:
   visualizer:
