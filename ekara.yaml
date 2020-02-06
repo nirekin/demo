@@ -19,7 +19,7 @@ hooks:
       - task: hook1  
 
 nodes:
-  _:
+  nodeset1:
     provider:
       name: ek-aws
       params:
@@ -44,6 +44,6 @@ nodes:
           tags:
             Type: Docker
             TestTagKey: TestTagValue
-  nodeset1:
+ 
     instances: 1
 
