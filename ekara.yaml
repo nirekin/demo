@@ -5,6 +5,8 @@ ekara:
   distribution:
     repository: ekara-platform/distribution
   components:
+    nirekin-hook:
+      repository: nirekin/hook
     ek-aws:
       repository: adrienlauer/aws-provider
       ref: inventory
@@ -13,6 +15,16 @@ ekara:
       ref: inventory
     visualizer:
       repository: ekara-platform/swarm-visualizer-stack
+
+tasks:
+  hook1:
+    component: nirekin-hook 
+    playbook: book1.yaml
+
+hooks:
+  create:
+    before:
+      - task: hook1  
 
 nodes:
   _:
