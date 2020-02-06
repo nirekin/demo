@@ -3,7 +3,7 @@ qualifier: light
 
 ekara:
   distribution:
-    repository: ekara-platform/distribution
+    repository: nirekin/distribution
   components:
     nirekin-hook:
       repository: nirekin/hook
@@ -47,8 +47,3 @@ nodes:
   nodeset1:
     instances: 1
 
-stacks:
-  visualizer:
-    component: ek-swarm-visualizer
-    templates:
-      - "docker-compose.yml"
