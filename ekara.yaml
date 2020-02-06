@@ -8,15 +8,6 @@ ekara:
     nirekin-hook:
       repository: nirekin/hook
 
-tasks:
-  hook1:
-    component: nirekin-hook 
-    playbook: book1.yaml
-
-hooks:
-  create:
-    before:
-      - task: hook1  
 
 nodes:
   nodeset1:
