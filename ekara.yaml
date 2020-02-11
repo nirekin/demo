@@ -101,6 +101,12 @@ nodes:
             TestTagKey: TestTagValue
  
     instances: 1
+    hooks:
+      create:
+        before:
+          - task: hook3  
+          - task: hook4  
+            prefix: hook4Prefix
 
 hooks:
   create:
