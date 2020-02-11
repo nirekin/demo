@@ -23,6 +23,15 @@ tasks:
   hook1:
     component: nirekin-hook 
     playbook: book1.yaml
+  hook2:
+    component: nirekin-hook 
+    playbook: book2.yaml
+  hook3:
+    component: nirekin-hook 
+    playbook: book3.yaml
+  hook4:
+    component: nirekin-hook 
+    playbook: book4.yaml
       
 providers:
   ek-aws:
@@ -97,6 +106,8 @@ hooks:
   create:
     before:
       - task: hook1  
+      - task: hook2  
+        prefix: hook2Prefix
 
 stacks:
   visualizer:
