@@ -1,4 +1,4 @@
-name: ekara_demo_gb1
+name: ekara_demo_gb2
 qualifier: light
 
 ekara:
@@ -27,11 +27,13 @@ tasks:
     component: nirekin-hook 
     playbook: book4.yaml
 
-
 nodes:
   nodeset1:
     provider:
       name: ek-aws
+      params:
+        instances:
+          instance_type: "t3.small"
  
     instances: 1
     hooks:
