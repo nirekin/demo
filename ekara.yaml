@@ -2,18 +2,12 @@ name: ekara_demo_gb1
 qualifier: light
 
 ekara:
+  parent:
+    repository: ekara-platform/distribution
+    ref: master
   components:
     nirekin-hook:
       repository: nirekin/hook
-    ek-aws:
-      repository: ekara-platform/aws-provider
-      ref: master
-    ek-swarm:
-      repository: ekara-platform/swarm-orchestrator
-      ref: master
-    ek-swarm-visualizer:
-      repository: ekara-platform/swarm-visualizer-stack
-      ref: v1.0.0
       
 vars:
   ekara:
@@ -32,73 +26,12 @@ tasks:
   hook4:
     component: nirekin-hook 
     playbook: book4.yaml
-      
-providers:
-  ek-aws:
-    component: ek-aws
-    params:
-      securityGroups:
-        ek-ssh:
-          rules:
-          - proto: tcp
-            ports:
-            - 22
-            cidr_ip: 0.0.0.0/0
-            rule_desc: Node SSH access
-        ek-swarm:
-          rules:
-          - proto: tcp
-            ports:
-            - 2377
-            - 7946
-            cidr_ip: 0.0.0.0/0
-            rule_desc: Swarm TCP communication
-          - proto: udp
-            ports:
-            - 7946
-            - 4789
-            cidr_ip: 0.0.0.0/0
-            rule_desc: Swarm UDP communication
-      volumes:
-        ekara:
-          ebs:
-            volume_size: 20
-            delete_on_termination: true
-          fs:
-            mount_path: {{ .Vars.ekara.path }}
 
-orchestrator:
-  component: ek-swarm
-  params:
-    daemon:
-      data-root: "{{ .Vars.ekara.path }}/docker"
 
 nodes:
   nodeset1:
     provider:
       name: ek-aws
-      params:
-        instance_type: "t2.micro"
-        ami_id: "ami-f90a4880"
-        vpc_id: "vpc-880aeaef"
-        security_groups:
-          - name: app
-            rules:
-              - proto: tcp
-                ports:
-                  - {{ .Vars.app.visualizer.port }} 
-                cidr_ip: 0.0.0.0/0
-                rule_desc: allow all on port {{ .Vars.app.visualizer.port }} for the swarm visualizer 
-    volumes:
-      - path: /var/lib/docker
-        params:
-          device_name: xvdg
-          volume_type: standard
-          volume_size: 1
-          delete_on_termination: true
-          tags:
-            Type: Docker
-            TestTagKey: TestTagValue
  
     instances: 1
     hooks:
