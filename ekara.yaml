@@ -49,6 +49,11 @@ hooks:
       - task: hook1  
       - task: hook2  
         prefix: hook2Prefix
+  install:
+    before:
+      - task: hook5  
+      - task: hook6  
+        prefix: hook4Prefix
 
 stacks:
   visualizer:
