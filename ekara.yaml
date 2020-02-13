@@ -51,9 +51,9 @@ hooks:
         prefix: hook2Prefix
   install:
     before:
-      - task: hook5  
-      - task: hook6  
-        prefix: hook4Prefix
+      - task: hook5
+      - task: hook6
+        prefix: hook6Prefix
 
 stacks:
   visualizer:
