@@ -26,6 +26,12 @@ tasks:
   hook4:
     component: nirekin-hook 
     playbook: book4.yaml
+  hook5:
+    component: nirekin-hook 
+    playbook: book5.yaml
+  hook6:
+    component: nirekin-hook 
+    playbook: book6.yaml
 
 nodes:
   nodeset1:
